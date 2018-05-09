@@ -1,0 +1,23 @@
+{
+  "name": "web_video_test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-art": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-native-web": "^0.6.1",
+    "react-player": "^1.5.0",
+    "react-scripts": "1.1.4",
+    "react-videoplayer": "^0.6.4",
+    "react-youtube": "^7.6.0",
+    "redux": "^4.0.0",
+    "video-react": "^0.10.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
