@@ -22,6 +22,11 @@ import "../node_modules/video-react/dist/video-react.css";
 import ReactPlayer from 'react-player'
 
 
+import {VimeoPlayer, YouTubePlayer} from 'react-video-players';
+
+import Iframe from 'react-iframe'
+
+
 
 class App extends Component {
 
@@ -67,6 +72,25 @@ class App extends Component {
 
       <View>
         <Text>Different React Video Tests!</Text>
+
+
+        <DividerVertical/>
+        <Text>simple video https://s3.amazonaws.com/codecademy-content/courses/React/react_video-fast.mp4</Text>
+        <Text>JS video </Text>
+        <View style={{
+          margin:10,
+          borderWidth: 0.3,
+          width: 500,
+          padding: 5,
+          borderRadius: 5
+        }}>
+        <video
+          controls
+          autoPlay
+          src={'https://s3.amazonaws.com/codecademy-content/courses/React/react_video-fast.mp4'} />
+        </View>
+
+
         <DividerVertical/>
         <Text>React-videoplayer : https://www.w3schools.com/html/mov_bbb.mp4</Text>
         <Text>https://www.npmjs.com/package/react-videoplayer</Text>
@@ -169,6 +193,79 @@ class App extends Component {
           url='https://vimeo.com/90509568'
           playing={false} />
         </View>
+
+
+        <DividerVertical/>
+        <Text>React-Video-Players: YOUTUBE ID: NPc0M0lFwE8</Text>
+        <Text>htthttps://github.com/ryanhefner/react-video-players</Text>
+        <View style={{
+          margin:10,
+          borderWidth: 0.3,
+          width: 650,
+          padding: 5,
+          borderRadius: 5
+        }}>
+          <YouTubePlayer videoId="NPc0M0lFwE8" />
+        </View>
+
+
+        <DividerVertical/>
+        <Text>React-Video-Players: VimeoPlayer ID: 72364164</Text>
+        <Text>htthttps://github.com/ryanhefner/react-video-players</Text>
+        <View style={{
+          margin:10,
+          borderWidth: 0.3,
+          width: 650,
+          padding: 5,
+          borderRadius: 5
+        }}>
+          <VimeoPlayer videoId="72364164" />
+        </View>
+
+
+
+        <DividerVertical/>
+        <Text>React Iframe: https://www.youtube.com/embed/_wu0YsReJQU</Text>
+        <Text>https://github.com/svenanders/react-iframe </Text>
+        <View style={{
+          margin:10,
+          borderWidth: 0.3,
+          width: 650,
+          padding: 5,
+          borderRadius: 5
+        }}>
+          <Iframe url="https://www.youtube.com/embed/_wu0YsReJQU?start=100&showinfo=0&rel=0&modestBranding=1&feature=oembed&enablejsapi=1"
+            width="640px"
+            height="480px"
+            id="myId"
+            className="myClassname"
+            display="initial"
+            position="relative"
+            allowFullScreen/>
+        </View>
+
+
+        <DividerVertical/>
+        <Text>React Iframe: https://player.twitch.tv/?autoplay=false&video=v254093935</Text>
+        <Text>https://github.com/svenanders/react-iframe </Text>
+        <View style={{
+          margin:10,
+          borderWidth: 0.3,
+          width: 630,
+          padding: 5,
+          borderRadius: 5
+        }}>
+          <Iframe url="https://player.twitch.tv/?autoplay=false&video=v254093935"
+            width="620px"
+            height="378px"
+            id="myId"
+            className="myClassname"
+            display="initial"
+            position="relative"
+            allowFullScreen/>
+        </View>
+
+
 
       </View>
     );
